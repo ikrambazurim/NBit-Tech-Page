@@ -198,6 +198,19 @@
             z-index: -1;
             opacity: 0.9;
         }
+
+        /* Shared animation defaults */
+        .fade-in, .fade-in-img, .hero-bg {
+        opacity: 0;
+        transform: translateY(30px); /* start slightly below */
+        transition: opacity 1s ease, transform 1s ease;
+        }
+
+        /* Final state after animation */
+        .fade-in.show, .fade-in-img.show, .hero-bg.show {
+        opacity: 1;
+        transform: translateY(0);
+        }        
         
         /* Section Styles */
         section {
