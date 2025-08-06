@@ -81,7 +81,7 @@
 
         window.addEventListener('load', () => {
             // Animate all elements with these classes
-            document.querySelectorAll('.fade-in-img, .hero').forEach(el => {
+            document.querySelectorAll('.fade-in-img, .hero.bg').forEach(el => {
             setTimeout(() => {
                     el.classList.add('show');
                 }, 200); // small delay for smoother effect
