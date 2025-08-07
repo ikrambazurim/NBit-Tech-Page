@@ -80,10 +80,12 @@
         }
 
         window.addEventListener('load', () => {
-            // Animate all elements with these classes
-            document.querySelectorAll('.fade-in-img, .hero.bg').forEach(el => {
-            setTimeout(() => {
-                    el.classList.add('show');
-                }, 200); // small delay for smoother effect
-            });
+            const heroSection = document.querySelector('.hero');
+            if (heroSection) {
+                // small delay for smooth entrance
+                setTimeout(() => {
+                    heroSection.classList.add('animate-bg');
+                }, 300);
+            }
         });
+
