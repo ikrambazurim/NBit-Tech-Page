@@ -218,6 +218,16 @@
             opacity: 0.9;
         }
 
+        .hero-bg {
+        background-size: cover;
+        background-position: center;
+        transition: background-image 1s ease-in-out;
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        }
+
+
         /* Shared animation defaults */
         .fade-in, .fade-in-img, .hero{
         opacity: 0;
@@ -784,66 +794,4 @@
         
         .floating {
             animation: float 6s ease-in-out infinite;
-        }
-
-
-        /* Section Layout */
-        .feature-section {
-            padding: 80px 20px;
-            background: linear-gradient(135deg, rgba(230, 57, 70, 0.03), rgba(29, 53, 87, 0.03));
-        }
-
-        .feature-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10%;
-            flex-wrap: wrap; /* mobile responsive */
-        }
-
-        /* Image Styling */
-        .feature-image {
-            max-width: 850px;
-            max-height: 650px;
-            overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px var(--secondary);
-            flex: 1;
-        }
-
-        .feature-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        /* Text Block */
-        .feature-text {
-            max-width: 450px;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .feature-text h3 {
-            font-size: 32px;
-            font-weight: 600;
-            color: var(--secondary);
-        }
-
-        .feature-point h4 {
-            font-size: 20px;
-            font-weight: 500;
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .feature-point span {
-            font-size: 16px;
-            color: #555;
-            line-height: 1.6;
         }
