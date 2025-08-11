@@ -178,7 +178,9 @@
             margin-bottom: 30px;
             color: var(--light);
             line-height: 1.6;
-            
+            text-align: justify;
+            text-justify: inter-word;
+
         }
         
         .btn {
