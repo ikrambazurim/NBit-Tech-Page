@@ -288,6 +288,14 @@
         }
         
         /* Services Section */
+        .services-section {
+            min-height: 100vh; /* full screen height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            scroll-snap-align: start;
+        }
+        
         .services {
             background-color: var(--gray);
         }
@@ -339,12 +347,21 @@
         }
         
         /* Products Section */
+
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 30px;
         }
-        
+
+        .products-section {
+            min-height: 100vh; /* full screen height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            scroll-snap-align: start;
+        }
+
         .product-card {
             background-color: var(--light);
             border-radius: 8px;
@@ -454,6 +471,14 @@
         .partners {
             text-align: center;
         }
+
+        .partners-section {
+            min-height: 100vh; /* full screen height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            scroll-snap-align: start;
+        }
         
         .partner-logos {
             display: flex;
@@ -475,10 +500,58 @@
             filter: grayscale(0);
             opacity: 1;
         }
+
+
+/* ===== Client Section ===== */
+        .client {
+            text-align: center;
+        }
+
+        .client-section {
+            min-height: 100vh; /* full screen height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            scroll-snap-align: start;
+        }
+
+        .client-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .client-logo {
+            max-width: 150px;      /* max width limit */
+            max-height: 80px;      /* ensures uniform height */
+            width: auto;           /* keep aspect ratio */
+            height: auto;          /* keep aspect ratio */
+            object-fit: contain;   /* prevent stretching */
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+
+        .client-logo:hover {
+            filter: grayscale(0);
+            opacity: 1;
+        }
+
         
         /* Careers Section */
         .careers {
             background-color: var(--gray);
+        }
+
+        .careers-section {
+            min-height: 100vh; /* full screen height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            scroll-snap-align: start;
         }
         
         .career-card {
@@ -514,6 +587,13 @@
             position: relative;
         }
         
+        .contact-section {
+            min-height: 100vh; /* full screen height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            scroll-snap-align: start;
+        }
         .contact-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -1043,4 +1123,17 @@
         .product-content p {
             font-size: 0.95rem;
             color: #555;
+        }
+
+        html {
+            scroll-behavior: smooth; /* smooth scroll */
+        }
+
+        body {
+            scroll-snap-type: y mandatory; /* vertical snapping */
+            overflow-y: scroll;
+        }
+
+        section {
+            scroll-snap-align: start; /* snap each section to top */
         }
