@@ -31,13 +31,35 @@
             z-index: 1000;
             background-color: rgba(255, 255, 255, 0.98);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            transition: var(--transition);
+            transition: all 0.3s ease; /* smoother animation for shrinking */
             border-bottom: 3px solid var(--primary);
+            display: flex;
+            align-items: center;
         }
-        
+
         header.scrolled {
             background-color: rgba(255, 255, 255, 0.98);
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            height: 12%; /* shrink height when scrolling */
+        }
+
+        header logo img {
+            font-size: 2rem;
+            transition: font-size 0.3s ease;
+        }
+
+        header.scrolled logo img {
+            font-size: 1.5rem; /* make logo smaller when scrolled */
+        }
+
+        /* Adjust navigation padding when scrolled */
+        header nav a {
+            padding: 20px;
+            transition: padding 0.3s ease;
+        }
+
+        header.scrolled nav a {
+            padding: 10px;
         }
         
         .container {
