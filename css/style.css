@@ -1159,3 +1159,113 @@
         section {
             scroll-snap-align: start; /* snap each section to top */
         }
+
+/* ===== Cloud Services Section ===== */
+.cloud {
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+    padding: 60px 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+/* Titles */
+.cloud-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cloud-title h2 {
+    font-size: 2.5rem;
+    color: #e63946;
+}
+
+.cloud-title p {
+    color: #aaa;
+}
+
+/* Glassmorphism */
+.cloud-glass {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 25px rgba(230, 57, 70, 0.2);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cloud-glass:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 0 35px rgba(230, 57, 70, 0.4);
+}
+
+.cloud-glass img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+/* Timeline for Problem */
+.cloud-timeline {
+    position: relative;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.cloud-timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, #e63946, transparent);
+}
+
+.cloud-timeline-item {
+    position: relative;
+    padding-left: 40px;
+}
+
+.cloud-timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 20px;
+    width: 16px;
+    height: 16px;
+    background: #e63946;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #e63946;
+}
+
+/* Solution Grid */
+.cloud-solution-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 20px 0;
+}
+
+.cloud-solution-panel {
+    text-align: center;
+}
+
+.cloud-solution-panel img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+/* Divider */
+.cloud-divider {
+    height: 2px;
+    background: linear-gradient(to right, transparent, #e63946, transparent);
+    margin: 60px 0;
+}
