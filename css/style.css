@@ -1316,3 +1316,162 @@
     background: linear-gradient(to right, transparent, #e63946, transparent);
     margin: 60px 0;
 }
+
+/*fas feature*/
+
+.fas {
+    background: linear-gradient(135deg, var(--light));
+    color: var(--gray);
+    padding: 60px 0;
+    width: 100%; /* Ensure full width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;/* ensures text aligns center */
+}
+
+.fas .container {
+    max-width: 1200px;
+    margin: 0 auto; /* centers container itself */
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fas-timeline,
+.fas-solution-grid {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Glassmorphism */
+.fas-glass {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 15px var(--secondary);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #fff;
+}
+
+.fas-glass:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 0 35px var(--secondary);
+}
+
+.fas h3 {
+    font-size: 1 rem;
+    color: var(--secondary);
+    margin-bottom: 20px;
+}
+
+.fas p {
+    color: #aaa;
+    max-width: 800px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* Timeline Grid */
+.fas-timeline {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    justify-items: center; /* Center grid items horizontally */
+}
+
+/* Timeline Item with image + text */
+.fas-timeline-item {
+    width: 100%;
+    max-width: 500px;
+    min-height: 150px; /* Set a minimum height */
+    display: flex;
+    align-items: center; /* Vertically center content */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.fas-timeline-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* Solution Grid */
+.fas-solution-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 40px 0;
+    width: 100%;
+    justify-items: center;
+}
+
+.fas-solution-panel {
+    width: 100%;
+    max-width: 400px;
+    min-height: 350px; /* Set a fixed height or min-height */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Ensure content inside panels is properly spaced */
+.fas-solution-panel > div {
+    flex: 1; /* Makes this element grow to fill available space */
+    display: flex;
+    flex-direction: column;
+}
+
+.fas-solution-panel img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Style for text content to handle overflow */
+.fas-timeline-item p,
+.fas-solution-panel p {
+    margin: 10px 0 0;
+    flex-grow: 1; /* Allows paragraph to expand */
+    overflow: hidden; /* Hide overflow */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limit to 3 lines */
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .fas-timeline {
+        grid-template-columns: 1fr;
+    }
+    .fas-timeline-item {
+        grid-template-columns: 60px auto;
+    }
+}
+
+/* Media query for responsive adjustments */
+@media (max-width: 768px) {
+    .fas-timeline-item {
+        min-height: auto; /* Allow natural height on mobile */
+    }
+    
+    .fas-solution-panel {
+        min-height: 300px;
+    }
+    
+    .fas-timeline-item p,
+    .fas-solution-panel p {
+        -webkit-line-clamp: 2; /* Show fewer lines on mobile */
+    }
+}
