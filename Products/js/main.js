@@ -78,4 +78,23 @@ window.addEventListener('load', () => {
         }, 300);
     }
 
+        // Select all reveal elements (all variations)
+        const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-zoom');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                } else {
+                    // Remove 'active' to allow re-trigger on scroll back
+                    entry.target.classList.remove('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Observe each element
+        reveals.forEach(reveal => {
+            observer.observe(reveal);
+        });
+
 });

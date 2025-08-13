@@ -39,11 +39,12 @@
 
         header.scrolled {
             background-color: rgba(255, 255, 255, 0.98);
+            opacity: 70%; /* slightly transparent when scrolled */
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-            height: 12%; /* shrink height when scrolling */
+            height: 10%; /* shrink height when scrolling */
         }
 
-        header logo img {
+        .logo img {
             font-size: 2rem;
             transition: font-size 0.3s ease;
         }
@@ -83,8 +84,19 @@
             text-decoration: none;
             display: flex;
             align-items: center;
+            size: 50%;
         }
-        
+
+        .logo img {
+            width: 80px;
+            height: auto;
+            transition: width 0.3s ease, height 0.3s ease;
+        }
+
+        header.scrolled .logo img {
+            width: 50px; /* smaller when scrolled */
+        }
+
         .logo span {
             color: var(--primary);
         }
@@ -1159,3 +1171,38 @@
         section {
             scroll-snap-align: start; /* snap each section to top */
         }
+
+        /* Scroll Animation Base State */
+        /* Base hidden state for all reveals */
+        .reveal,
+        .reveal-left,
+        .reveal-right,
+        .reveal-zoom {
+            opacity: 0;
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        /* Variations starting positions */
+        .reveal {
+            transform: translateY(30px);
+        }
+        .reveal-left {
+            transform: translateX(-30px);
+        }
+        .reveal-right {
+            transform: translateX(30px);
+        }
+        .reveal-zoom {
+            transform: scale(0.9);
+        }
+
+        /* Active state (when in view) */
+        .reveal.active,
+        .reveal-left.active,
+        .reveal-right.active,
+        .reveal-zoom.active {
+            opacity: 1;
+            transform: none;
+        }
+
+
