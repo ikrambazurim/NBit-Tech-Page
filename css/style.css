@@ -1206,113 +1206,87 @@
         }
 
 
-
-/* ===== Cloud Services Section ===== */
-.cloud {
-    background: linear-gradient(135deg, #ffffff);
-    padding: 60px 20px;
-    font-family: 'Poppins', sans-serif;
-    color: #fff;
+/* Cloud Section Grid */
+.cloud-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 40px;
 }
 
-/* Titles */
-.cloud-title {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.cloud-title h2 {
-    font-size: 2.5rem;
-    color: #e63946;
-}
-
-.cloud-title p {
-    color: #aaa;
-}
-
-/* Glassmorphism */
-.cloud-glass {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 20px;
-    backdrop-filter: blur(12px);
-    box-shadow: 0 0 25px rgba(230, 57, 70, 0.2);
-    padding: 20px;
+/* Each Card */
+.cloud-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.cloud-glass:hover {
-    transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 0 35px rgba(230, 57, 70, 0.4);
+.cloud-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-.cloud-glass img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 15px;
-    margin-bottom: 15px;
-}
-
-/* Timeline for Problem */
-.cloud-timeline {
+/* Image */
+.cloud-image {
     position: relative;
-    padding-left: 40px;
+    overflow: hidden;
+}
+
+.cloud-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.cloud-card:hover .cloud-image img {
+    transform: scale(1.08);
+}
+
+/* Overlay on Hover */
+.cloud-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.75); /* Darker background for text visibility */
+    color: #fff;
     display: flex;
     flex-direction: column;
-    gap: 30px;
-}
-
-.cloud-timeline::before {
-    content: '';
-    position: absolute;
-    left: 20px;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background: linear-gradient(to bottom, #e63946, transparent);
-}
-
-.cloud-timeline-item {
-    position: relative;
-    padding-left: 40px;
-}
-
-.cloud-timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -8px;
-    top: 20px;
-    width: 16px;
-    height: 16px;
-    background: #e63946;
-    border-radius: 50%;
-    box-shadow: 0 0 10px #e63946;
-}
-
-/* Solution Grid */
-.cloud-solution-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    padding: 20px 0;
-}
-
-.cloud-solution-panel {
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 20px;
     text-align: center;
 }
 
-.cloud-solution-panel img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 15px;
-    margin-bottom: 15px;
+.cloud-card:hover .cloud-info {
+    opacity: 1;
 }
 
-/* Divider */
-.cloud-divider {
-    height: 2px;
-    background: linear-gradient(to right, transparent, #e63946, transparent);
-    margin: 60px 0;
+.cloud-info h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+    margin-bottom: 10px;
+}
+
+.cloud-info p {
+    font-size: 1rem;
+    line-height: 1.4;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+/* Title Below Image */
+.cloud-title {
+    font-size: 1.15rem;
+    font-weight: bold;
+    padding: 15px 10px;
+    color: #1d3557; /* Dark Blue for strong contrast */
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.15); /* Soft shadow for light backgrounds */
 }
