@@ -1,0 +1,87 @@
+/* Reset only for IoT page */
+.iot-page * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Hero section */
+.iot-page .hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.iot-page .hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.iot-page .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: auto;
+}
+
+.iot-page .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.iot-page .hero p {
+    font-size: 1.2rem;
+}
+
+/* Features section */
+.iot-page .features {
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.iot-page .features h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.iot-page .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.iot-page .feature-item {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: left; /* bullet points will align left */
+}
+
+.iot-page .feature-item h3 {
+    margin-bottom: 10px;
+}
+
+.iot-page .feature-item ul {
+    padding-left: 20px; /* indentation for bullets */
+    list-style: disc; /* ensure bullets are visible */
+}
+
+/* Section wrapper for extra IoT content */
+.iot-page .iot-section {
+    display: flex;
+    justify-content: center; /* center the content horizontally */
+    padding: 40px 20px;
+}
