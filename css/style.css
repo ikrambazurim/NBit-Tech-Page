@@ -1217,6 +1217,7 @@
 /* Each Card */
 .cloud-card {
     background: #fff;
+    padding: 30px;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
@@ -1304,3 +1305,66 @@
     background: linear-gradient(to right, transparent, #e63946, transparent);
     margin: 60px 0;
 }
+
+.cloud-description {
+    font-size: 12px;
+    color: #666;
+    margin-top: 2px;
+    line-height: 1.5;
+}
+
+/* ---------------------------
+   IoT Page Specific Styles
+   --------------------------- */
+.page-iot .iot-section {
+    padding: 40px 15px;
+}
+
+.page-iot .iot-card {
+    background: #fff;
+    padding: 25px 30px; /* extra padding for breathing space */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 30px auto;
+    text-align: left;
+}
+
+.page-iot .iot-card h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.page-iot .iot-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px 0;
+}
+
+.page-iot .iot-card ul li {
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 6px;
+}
+
+.page-iot .iot-card ul li::before {
+    content: "✓";
+    color: green;
+    position: absolute;
+    left: 0;
+}
+
+.page-iot .iot-card .iot-link {
+    margin-bottom: 20px;
+}
+
+.page-iot .iot-card .iot-link a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.page-iot .iot-card .iot-link a:hover {
+    text-decoration: underline;
+}
+
