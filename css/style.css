@@ -1362,10 +1362,10 @@
 }
 
 .fas p {
-    color: #aaa;
-    max-width: 800px;
-    line-height: 1.6;
-    margin-bottom: 40px;
+    color: #777;
+    line-height: 1.5rem; /* Fixed: Added 'rem' unit */
+    margin-bottom: 20px;
+    font-weight: normal; /* Ensures text is not bold */
 }
 
 /* Timeline Grid */
