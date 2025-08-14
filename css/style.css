@@ -1460,8 +1460,4 @@
         min-height: 300px;
     }
     
-    .fas-timeline-item p,
-    .fas-solution-panel p {
-        -webkit-line-clamp: 2; /* Show fewer lines on mobile */
-    }
 }
