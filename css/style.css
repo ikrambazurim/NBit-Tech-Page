@@ -653,7 +653,7 @@
         .contact-icon {
             width: 40px;
             height: 40px;
-            background: var(--primary);
+            background: var(--secondary);
             color: var(--light);
             border-radius: 50%;
             display: flex;
@@ -1312,7 +1312,7 @@
 
 .fas {
     background: linear-gradient(135deg, var(--light));
-    color: var(--gray);
+    background: linear-gradient(135deg, rgba(230, 57, 70, 0.03), rgba(29, 53, 87, 0.03));
     padding: 60px 0;
     width: 100%; /* Ensure full width */
     display: flex;
@@ -1320,6 +1320,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;/* ensures text aligns center */
+
 }
 
 .fas .container {
@@ -1364,8 +1365,10 @@
 .fas p {
     color: #777;
     line-height: 1.5rem; /* Fixed: Added 'rem' unit */
-    margin-bottom: 20px;
+    margin: 30px;
     font-weight: normal; /* Ensures text is not bold */
+    text-align: justify;
+    justify-content: left;
 }
 
 /* Timeline Grid */
@@ -1386,6 +1389,7 @@
     align-items: center; /* Vertically center content */
     padding: 20px;
     box-sizing: border-box;
+    gap: 20px; 
 }
 
 .fas-timeline-icon {
@@ -1403,6 +1407,7 @@
     padding: 40px 0;
     width: 100%;
     justify-items: center;
+    margin-top: 0  !important;
 }
 
 .fas-solution-panel {
@@ -1427,6 +1432,7 @@
     height: 180px;
     object-fit: cover;
     margin-bottom: 15px;
+    margin-right: 20px; /* Add margin to the right */
 }
 
 /* Style for text content to handle overflow */
@@ -1461,4 +1467,191 @@
         min-height: 300px;
     }
     
+}
+
+/* ERP Features Section */
+.erp-features {
+  padding: 80px 0;
+  background-color: #f8fafc;
+}
+
+.erp-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.erp-section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.erp-section-header h2 {
+  font-size: 2.5rem;
+  color: #1e293b;
+  margin-bottom: 15px;
+}
+
+.erp-section-header p {
+  font-size: 1.1rem;
+  color: #64748b;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.erp-features-container {
+  display: flex;
+  gap: 30px;
+}
+
+.erp-feature-tabs {
+  flex: 0 0 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.erp-tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 18px 20px;
+  background: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.erp-tab-btn:hover {
+  background: #f1f5f9;
+}
+
+.erp-tab-btn.erp-active {
+  background: var(--secondary);
+  color: white;
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.2);
+}
+
+.erp-icon {
+  font-size: 1.2rem;
+  width: 24px;
+  text-align: center;
+}
+
+.erp-tab-btn.erp-active .erp-icon {
+  color: white;
+}
+
+.erp-feature-content {
+  flex: 1;
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.erp-feature-panel {
+  display: none;
+  animation: erp-fadeIn 0.5s ease;
+}
+
+.erp-feature-panel.erp-active {
+  display: flex;
+  gap: 40px;
+}
+
+.erp-feature-text {
+  flex: 1;
+}
+
+.erp-feature-text h3 {
+  font-size: 1.8rem;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+.erp-feature-text p {
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.erp-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.erp-feature-list li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #475569;
+}
+
+.erp-feature-list i {
+  color: #3b82f6;
+}
+
+.erp-feature-image {
+  flex: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.erp-feature-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.erp-feature-image:hover img {
+  transform: scale(1.03);
+}
+
+@keyframes erp-fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .erp-features-container {
+    flex-direction: column;
+  }
+  
+  .erp-feature-tabs {
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1;
+  }
+  
+  .erp-feature-panel.erp-active {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .erp-section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .erp-feature-content {
+    padding: 30px 20px;
+  }
+  
+  .erp-tab-btn {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+  
+  .erp-icon {
+    font-size: 1rem;
+  }
 }

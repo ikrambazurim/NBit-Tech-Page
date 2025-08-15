@@ -1,6 +1,4 @@
-// Run after the page is fully loaded
 window.addEventListener('load', () => {
-
     /*Mobile Menu Toggle*/
     const menuToggle = document.getElementById('menuToggle');
     const navLinks = document.getElementById('navLinks');
@@ -65,12 +63,11 @@ window.addEventListener('load', () => {
             const message = document.getElementById('message')?.value || '';
 
             alert(`Thank you, ${name}! Your message has been received. We'll contact you at ${email} soon.`);
-
             contactForm.reset();
         });
     }
 
-    /** Hero Section Animation */
+    /*Hero Section Animation*/
     const heroSection = document.getElementById('hero');
     if (heroSection) {
         setTimeout(() => {
@@ -78,23 +75,49 @@ window.addEventListener('load', () => {
         }, 300);
     }
 
-        // Select all reveal elements (all variations)
-        const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-zoom');
+    /*Scroll Reveal Animations*/
+    const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-zoom');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            } else {
+                entry.target.classList.remove('active');
+            }
+        });
+    }, { threshold: 0.1 });
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                } else {
-                    // Remove 'active' to allow re-trigger on scroll back
-                    entry.target.classList.remove('active');
+    reveals.forEach(reveal => {
+        observer.observe(reveal);
+    });
+
+    /*ERP Tab Functionality - Corrected Placement*/
+    const erpTabButtons = document.querySelectorAll('.erp-tab-btn');
+    const erpFeaturePanels = document.querySelectorAll('.erp-feature-panel');
+    
+    if (erpTabButtons.length && erpFeaturePanels.length) {
+        erpTabButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons and panels
+                erpTabButtons.forEach(btn => btn.classList.remove('erp-active'));
+                erpFeaturePanels.forEach(panel => panel.classList.remove('erp-active'));
+                
+                // Add active class to clicked button
+                this.classList.add('erp-active');
+                
+                // Show corresponding panel
+                const erpTabId = this.getAttribute('data-erp-tab');
+                const erpActivePanel = document.getElementById(erpTabId);
+                if (erpActivePanel) {
+                    erpActivePanel.classList.add('erp-active');
                 }
             });
-        }, { threshold: 0.1 });
-
-        // Observe each element
-        reveals.forEach(reveal => {
-            observer.observe(reveal);
         });
-
+        
+        // Initialize first tab as active if none is active
+        if (!document.querySelector('.erp-tab-btn.erp-active')) {
+            erpTabButtons[0]?.classList.add('erp-active');
+            erpFeaturePanels[0]?.classList.add('erp-active');
+        }
+    }
 });

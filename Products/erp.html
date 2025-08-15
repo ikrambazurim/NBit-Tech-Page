@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NBit Technology - Digital Transformation Services</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <!-- Header -->
@@ -40,32 +41,119 @@
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section class="products" id="products">
-        <div class="container">
+    <section class="erp-features">
+        <div class="erp-container">
             <div class="section-title">
-                <h2>Streamline your business with our modern digital platform</h2>
-                <p>Innovative software solutions designed to streamline your business operations.</p>
+            <h2>Streamline your business with our modern ERP platform</h2>
+            <p>Discover the powerful capabilities of our enterprise resource planning solution</p>
             </div>
-            <div class="products-grid">
-                <div class="product-card">
-                    <div class="product-image" style="background-image: url('/image/HRIS image.jpg');">
+
+            <div class="erp-features-container">
+                <div class="erp-feature-tabs">
+                    <button class="erp-tab-btn erp-active" data-erp-tab="erp-inventory">
+                    <i class="erp-icon fas fa-boxes"></i>
+                    <span>Inventory Management</span>
+                    </button>
+                    <button class="erp-tab-btn" data-erp-tab="erp-accounting">
+                    <i class="erp-icon fas fa-calculator"></i>
+                    <span>Accounting</span>
+                    </button>
+                    <button class="erp-tab-btn" data-erp-tab="erp-hr">
+                    <i class="erp-icon fas fa-users"></i>
+                    <span>Human Resources</span>
+                    </button>
+                    <button class="erp-tab-btn" data-erp-tab="erp-crm">
+                    <i class="erp-icon fas fa-handshake"></i>
+                    <span>Customer Relations</span>
+                    </button>
+                    <button class="erp-tab-btn" data-erp-tab="erp-reporting">
+                    <i class="erp-icon fas fa-chart-pie"></i>
+                    <span>Advanced Reporting</span>
+                    </button>
+                </div>
+
+                <div class="erp-feature-content">
+                    <div class="erp-feature-panel erp-active" id="erp-inventory">
+                        <div class="erp-feature-text">
+                            <h3>Comprehensive Inventory Control</h3>
+                            <p>Gain real-time visibility into your stock levels across multiple warehouses. Our inventory module helps you optimize stock levels, reduce carrying costs, and prevent stockouts.</p>
+                            <ul class="erp-feature-list">
+                            <li><i class="fas fa-check-circle"></i> Multi-location tracking</li>
+                            <li><i class="fas fa-check-circle"></i> Automated reorder points</li>
+                            <li><i class="fas fa-check-circle"></i> Barcode scanning support</li>
+                            <li><i class="fas fa-check-circle"></i> Inventory valuation reports</li>
+                            </ul>
+                        </div>
+                        <div class="erp-feature-image">
+                            <img src="https://example.com/erp-inventory.jpg" alt="ERP Inventory Management">
+                        </div>
                     </div>
-                    <div class="product-content">
-                        <h2>HRMS</h2>
-                        <h3>Human Resource Management System</h3>
-                        <p>A comprehensive solution for managing your workforce, from recruitment to retirement, with advanced analytics and automation features.</p>
+
+                    <div class="erp-feature-panel" id="erp-accounting">
+                        <div class="erp-feature-text">
+                            <h3>Integrated Financial Management</h3>
+                            <p>Streamline your financial operations with our complete accounting solution that integrates seamlessly with all other ERP modules.</p>
+                            <ul class="erp-feature-list">
+                            <li><i class="fas fa-check-circle"></i> General ledger</li>
+                            <li><i class="fas fa-check-circle"></i> Accounts payable/receivable</li>
+                            <li><i class="fas fa-check-circle"></i> Financial reporting</li>
+                            <li><i class="fas fa-check-circle"></i> Tax compliance tools</li>
+                            </ul>
+                        </div>
+                        <div class="erp-feature-image">
+                            <img src="https://example.com/erp-accounting.jpg" alt="ERP Accounting">
+                        </div>                              
+                    </div>
+
+                    <div class="erp-feature-panel" id="erp-hr">
+                        <div class="erp-feature-text">
+                            <h3>Build-in HR features</h3>
+                            <p>Manage your workforce with our complete hr solution that features complete end-to-end process across all module within our system </p>
+                            <ul class="erp-feature-list">
+                            <li><i class="fas fa-check-circle"></i> Attendance, Overtime and Claim Management</li>
+                            <li><i class="fas fa-check-circle"></i> Payroll management</li>
+                            <li><i class="fas fa-check-circle"></i> Job applicant and training Management</li>
+                            <li><i class="fas fa-check-circle"></i> Performance Appraisal</li>
+                            </ul>
+                        </div>
+                        <div class="erp-feature-image">
+                            <img src="https://example.com/erp-accounting.jpg" alt="ERP Accounting">
+                        </div>
+                    </div>
+
+                    <div class="erp-feature-panel" id="erp-crm">
+                        <div class="erp-feature-text">
+                            <h3>Equipped with all your CRM needs</h3>
+                            <p>We help keep all your potential client and current Customer details within one platform, so you can focus on converting them to sales</p>
+                            <ul class="erp-feature-list">
+                            <li><i class="fas fa-check-circle"></i> Lead, Contact and Opportunities management</li>
+                            <li><i class="fas fa-check-circle"></i> Sales automation and analytics</li>
+                            <li><i class="fas fa-check-circle"></i> Email tracking</li>
+                            <li><i class="fas fa-check-circle"></i> Campaign Management</li>
+                            </ul>
+                        </div>
+                        <div class="erp-feature-image">
+                            <img src="https://example.com/erp-accounting.jpg" alt="ERP Accounting">
+                        </div>
+                    </div>
+
+                    <div class="erp-feature-panel" id="erp-reporting">
+                        <div class="erp-feature-text">
+                            <h3>Equipped with all your CRM needs</h3>
+                            <p>We help keep all your potential client and current Customer details within one platform, so you can focus on converting them to sales</p>
+                            <ul class="erp-feature-list">
+                            <li><i class="fas fa-check-circle"></i> Centre of information</li>
+                            <li><i class="fas fa-check-circle"></i> Real-time data access</li>
+                            <li><i class="fas fa-check-circle"></i> Data Visualization</li>
+                            <li><i class="fas fa-check-circle"></i> Customizable Dashboard</li>
+                            </ul>
+                        </div>
+                        <div class="erp-feature-image">
+                            <img src="https://example.com/erp-accounting.jpg" alt="ERP Accounting">
+                        </div>
                     </div>
                 </div>
-                <div class="product-card">
-                    <div class="product-image" style="background-image: url('/image/FAS image.jpg')">
-                    </div>
-                    <div class="product-content">
-                        <h2>FAS</h2>
-                        <h3>Financial & Accounting System</h3>
-                        <p>End-to-end financial management with real-time reporting, compliance tracking, and intelligent forecasting capabilities.</p>
-                    </div>
-                </div>
+            </div>
             </div>
         </div>
     </section>
@@ -97,6 +185,66 @@
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                         Reiciendis commodi temporibus at? Aspernatur, a necessitatibus?
                     </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact reveal" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Interested?</h2>
+                <p>Get in touch with our team and let us help you streamline your business</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-text">
+                                <h4>Our Office</h4>
+                                <p>C-L28-08, KL Trillion Offices,</p>
+                                <p>338 Jalan Tun Razak,</p>
+                                <p>50400 Kuala Lumpur, Malaysia</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p>+60 3-2711 0662</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">✉️</div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>info@nbittech.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
                 </div>
             </div>
         </div>
