@@ -1,0 +1,85 @@
+/* ===== Managed Services Page Alternate Layout ===== */
+.services-alt {
+    width: 100%;
+    background: var(--gray);
+    padding: 40px 0;
+}
+
+/* Service Row Structure */
+.service-row {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 10%;
+    background: var(--light);
+    margin: 0 auto 40px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-row:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Reverse Layout for Alternating Effect */
+.service-row.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Image Section */
+.service-image {
+    flex: 1;
+}
+
+.service-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Text Section */
+.service-text {
+    flex: 1;
+}
+
+.service-text h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.service-text p {
+    font-size: 1.1rem;
+    color: var(--dark);
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .service-row {
+        padding: 40px 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-row,
+    .service-row.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .service-image,
+    .service-text {
+        flex: unset;
+        width: 100%;
+    }
+
+    .service-text p {
+        max-width: 100%;
+    }
+}
