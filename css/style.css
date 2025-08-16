@@ -1209,19 +1209,38 @@
 /* Cloud Section Grid */
 .cloud-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    padding: 40px;
+    grid-template-columns: repeat(3, 1fr); /* always 3 per row */
+    gap: 15px;          /* tighter spacing */
+    padding: 20px;      /* smaller padding */
+    margin-top: 20px;
 }
 
-/* Each Card */
 .cloud-card {
     background: #fff;
-    padding: 30px;
+    padding: 18px;      /* slightly smaller inside padding */
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 320px;   /* keeps card smaller */
+    margin: auto;
+}
+
+/* Image frame - same for all */
+.cloud-image {
+    width: 100%;
+    height: 180px;      /* fixed uniform height */
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.cloud-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* crop nicely without stretching */
+    display: block;
 }
 
 .cloud-card:hover {
