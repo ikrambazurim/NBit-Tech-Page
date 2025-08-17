@@ -53,17 +53,27 @@ window.addEventListener('load', () => {
     });
 
     /*Contact Form Submission*/
-    const contactForm = document.getElementById('contactForm');
+     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            const name = document.getElementById('name')?.value || '';
-            const email = document.getElementById('email')?.value || '';
-            const subject = document.getElementById('subject')?.value || '';
-            const message = document.getElementById('message')?.value || '';
+            const btn = this.querySelector('button[type="submit"]');
+            btn.disabled = true; // Disable button
+            btn.textContent = 'Sending...';
 
-            alert(`Thank you, ${name}! Your message has been received. We'll contact you at ${email} soon.`);
-            contactForm.reset();
+            emailjs.sendForm('service_vdfwrg1', 'template_b2qx6zk', this)
+                .then(() => {
+                    alert('Message sent successfully!');
+                    this.reset();
+                })
+                .catch((error) => {
+                    console.error('EmailJS Error:', error);
+                    alert('Error sending message. Please try again.');
+                })
+                .finally(() => {
+                    btn.disabled = false;
+                    btn.textContent = 'Send Message';
+                });
         });
     }
 
