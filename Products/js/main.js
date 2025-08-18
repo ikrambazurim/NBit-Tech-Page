@@ -130,4 +130,29 @@ window.addEventListener('load', () => {
             erpFeaturePanels[0]?.classList.add('erp-active');
         }
     }
+
+        // Intersection Observer for scroll animations
+    const animateOnScroll = (elements, className) => {
+        const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+            entry.target.classList.add(className);
+            }
+        });
+        }, { threshold: 0.1 });
+
+        elements.forEach(element => {
+        observer.observe(element);
+        });
+    };
+
+    // Animate all reveal elements
+    const reveal = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    animateOnScroll(reveal, 'active');
+
+    // Optional: Add hover effect to images with delay
+    const hisImages = document.querySelectorAll('.his-image img');
+    hisImages.forEach((img, index) => {
+        img.style.transitionDelay = `${index * 0.1}s`;
+    });
 });
