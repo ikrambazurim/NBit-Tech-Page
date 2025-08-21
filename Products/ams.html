@@ -205,12 +205,31 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script>
-        // Initialize EmailJS with your Public Key
-        (function() {
-            emailjs.init("oWfKA67MaOFS2bqyK"); // Replace with your actual public key
-        })();
-    </script>    
+<script>
+  document.querySelectorAll(".cylinder-btn").forEach(button => {
+    button.addEventListener("click", () => {
+      const targetPopup = document.getElementById(button.dataset.popup);
+
+      // Hide all other popups
+      document.querySelectorAll(".popup-content").forEach(p => {
+        if (p !== targetPopup) {
+          p.classList.remove("active");
+        }
+      });
+
+      // Toggle the clicked one
+      targetPopup.classList.toggle("active");
+    });
+  });
+
+  // Close popup if user clicks outside
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".cylinder-container") && !e.target.closest(".popup-content")) {
+      document.querySelectorAll(".popup-content").forEach(p => p.classList.remove("active"));
+    }
+  });
+</script>
+ 
     <script src="js/main.js"></script>
 </body>
 </html>
