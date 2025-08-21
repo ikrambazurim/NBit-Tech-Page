@@ -31,7 +31,11 @@
         </div>
     </header>
 
-    <section class="hero" id="hero" style="background-image: url(/image/observation-urban-building-business-steel.jpg);">
+<section class="hero" id="hero">
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="/image/AMS.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <div class="container">
             <div class="hero-content">
                 <h1>Asset Management System, <span>Manage your asset like a pro</span></h1>
@@ -88,33 +92,13 @@
         <img src="/image/still-life-supply-chain-representation.jpg" alt="Asset Management Dashboard">
       </div>
     </div>
-
-    <!-- Analytics -->
-    <div class="tab-content" id="tab3">
-      <h2>Analytics & Reporting</h2>
-      <p>Transform asset data into actionable insights with customizable dashboards and detailed reports.</p>
-      <ul>
-        <li>Real-time asset performance analytics</li>
-        <li>Customizable reporting & data visualization</li>
-        <li>Predictive insights for smarter decisions</li>
-      </ul>
-      <div class="tab-image">
-        <img src="/image/data-analytics-tablet.jpg" alt="Analytics Dashboard">
-      </div>
+    <div class="popup-content" id="popup3">
+      <h2>Industry Solutions</h2>
+      <p>We provide industry-specific ERP and CRM integrations that streamline processes.</p>
     </div>
-
-    <!-- Maintenance -->
-    <div class="tab-content" id="tab4">
-      <h2>Maintenance Oversight</h2>
-      <p>Plan preventive maintenance, track service history, and minimize downtime effectively.</p>
-      <ul>
-        <li>Automated preventive maintenance scheduling</li>
-        <li>Service history tracking & documentation</li>
-        <li>Minimized downtime with proactive alerts</li>
-      </ul>
-      <div class="tab-image">
-        <img src="/image/two-colleagues-factory.jpg" alt="Maintenance Dashboard">
-      </div>
+    <div class="popup-content" id="popup4">
+      <h2>Our Clients</h2>
+      <p>Trusted by leading businesses across industries worldwide.</p>
     </div>
   </div>
 </section>
@@ -282,5 +266,53 @@
 </script>
  
     <script src="js/main.js"></script>
+
+   <script>
+  const defaultPopup = document.getElementById("popup1"); // Overview
+
+  function showDefault() {
+    document.querySelectorAll(".popup-content").forEach(p => p.classList.remove("active"));
+    defaultPopup.classList.add("active");
+  }
+
+  // Show Overview by default
+  showDefault();
+
+  document.querySelectorAll(".cylinder-btn").forEach(button => {
+    const targetPopup = document.getElementById(button.dataset.popup);
+
+    button.addEventListener("mouseenter", () => {
+      document.querySelectorAll(".popup-content").forEach(p => p.classList.remove("active"));
+      targetPopup.classList.add("active");
+    });
+
+    button.addEventListener("mouseleave", () => {
+      setTimeout(() => {
+        if (![...document.querySelectorAll(".cylinder-btn:hover, .popup-content:hover")].some(Boolean)) {
+          showDefault();
+        }
+      }, 150);
+    });
+  });
+
+  document.querySelectorAll(".popup-content").forEach(popup => {
+    popup.addEventListener("mouseleave", () => {
+      setTimeout(() => {
+        if (![...document.querySelectorAll(".cylinder-btn:hover, .popup-content:hover")].some(Boolean)) {
+          showDefault();
+        }
+      }, 150);
+    });
+  });
+
+  // 👇 Ensure Overview always comes back after scrolling
+  window.addEventListener("scroll", () => {
+    if (![...document.querySelectorAll(".cylinder-btn:hover, .popup-content:hover")].some(Boolean)) {
+      showDefault();
+    }
+  });
+</script>
+
+
 </body>
 </html>

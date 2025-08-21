@@ -102,4 +102,91 @@
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
+.popup-content {
+  position: absolute;             /* stays relative to section */
+  top: 10px;                      /* adjust down from section top */
+  left: 50%;
+  transform: translateX(-50%);    /* only center horizontally */
+  width: 80%;
+  max-width: 1200px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+  z-index: 100;
+
+  /* Animation states */
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.popup-content.active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) scale(1); /* no vertical centering */
+}
+
+
+.popup-placeholder {
+  margin-top: 250px; /* push image lower so popups don’t overlap */
+}
+
+.cylinder-section {
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 120px;  /* more breathing space below popup */
+  padding-bottom: 250px; /* ensures popup doesn’t overlap next section */
+  text-align: center;
+}
+
+/* Hero Section with Video */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* fullscreen */
+  display: flex;
+  align-items: center;   /* vertically center */
+  justify-content: flex-start; /* move text to the left */
+  padding-left: 80px;   /* add some space from edge */
+  color: white;
+  text-align: left;     /* make sure text is aligned left */
+  z-index: 2;
+}
+
+.bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%); /* center video */
+  object-fit: cover; /* fill hero without distortion */
+  opacity: 0.7; /* dim for readability */
+  pointer-events: none; /* ignore clicks */
+}
+
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px; /* keeps text from stretching too far */
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #000; /* fallback if video doesn't load */
+}
+
+/* Keep video in its natural aspect ratio */
+.bg-video {
+  display: block;
+  max-width: 100%;   /* scale down if too wide */
+  height: auto;      /* keep aspect ratio */
+  margin: 0 auto;    /* center horizontally */
 }
