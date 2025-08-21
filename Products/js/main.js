@@ -192,3 +192,17 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+const tabBtns = document.querySelectorAll(".tab-btn");
+const tabContents = document.querySelectorAll(".tab-content");
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      // remove active state
+      tabBtns.forEach(b => b.classList.remove("active"));
+      tabContents.forEach(tc => tc.classList.remove("active"));
+
+      // add active to clicked button + matching content
+      btn.classList.add("active");
+      document.getElementById(btn.dataset.tab).classList.add("active");
+    });
+  });

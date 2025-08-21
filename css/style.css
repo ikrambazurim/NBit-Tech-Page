@@ -473,6 +473,15 @@
   height: auto;  /* FIXED: removed fixed 420px so content fits naturally */
 }
 
+  .product-card-2 {
+            background-color: var(--light);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            border: 1px solid #eee;
+        }
+
 /* Image */
 .product-image {
   height: 200px;  /* FIXED: keep all images same height */
