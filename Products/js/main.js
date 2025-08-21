@@ -61,7 +61,7 @@ window.addEventListener('load', () => {
             btn.disabled = true; // Disable button
             btn.textContent = 'Sending...';
 
-            emailjs.sendForm('service_vdfwrg1', 'template_b2qx6zk', this)
+            emailjs.sendForm('service_7zo66gu', 'template_b2qx6zk', this)
                 .then(() => {
                     alert('Message sent successfully!');
                     this.reset();
