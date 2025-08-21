@@ -1,0 +1,129 @@
+/* ===== Feature Cards ===== */
+.feature-section {
+  padding: 60px 20px;
+  background: #f8f9fb;
+}
+
+.feature-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.feature-card {
+  background: #fff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #007bff20;
+  color: #007bff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  margin-bottom: 16px;
+}
+
+.feature-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+  color: #444;
+}
+
+.feature-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-card ul li {
+  padding: 6px 0;
+  position: relative;
+  padding-left: 20px;
+  color: #333;
+}
+
+.feature-card ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #007bff;
+  font-size: 0.9rem;
+}
+
+/* ===== Cylinder Buttons & Popups ===== */
+.cylinder-container {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.cylinder-btn {
+  padding: 12px 25px;
+  border-radius: 25px;
+  border: none;
+  background: #0056d2;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.25s ease;
+}
+
+.cylinder-btn:hover {
+  background: #003d99;
+}
+
+.popup-container {
+  position: relative;
+  text-align: center;
+}
+
+.popup-content {
+  visibility: hidden;     /* hide but keep space */
+  opacity: 0;             /* invisible */
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px); /* start lower */
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  width: 350px;
+  z-index: 10;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+/* Active = fade in + slide up */
+.popup-content.active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+
+.popup-placeholder {
+  margin-top: 250px; /* push image lower so popups don’t overlap */
+}

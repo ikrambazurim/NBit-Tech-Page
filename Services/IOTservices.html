@@ -7,14 +7,14 @@
     
     <!-- Link to external CSS -->
     <link rel="stylesheet" href="/css/style.css">
-
+    <link rel="stylesheet" href="services_CSS/iot.css">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- Favicon (optional) -->
     <link rel="icon" href="/image/favicon.ico" type="image/x-icon">
 </head>
-<body class="page-iot">
+<body class="iot-page">
 
     <!-- Header -->
     <header id="header">
@@ -31,7 +31,6 @@
                     <li><a href="/nbitTech.html#services">Services</a></li>
                     <li><a href="/nbitTech.html#products">Products</a></li>
                     <li><a href="/nbitTech.html#partners">Partners</a></li>
-                    <!-- <li><a href="#careers">Careers</a></li>-->
                      <li><a href="/nbitTech.html#client">Client</a></li>
                     <li><a href="/about.html">About</a></li>
                     <li><a href="/nbitTech.html#contact">Contact</a></li>
@@ -41,8 +40,12 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="hero" style="background-image: url('/image/gambar3.jpg');">
-        <link rel="stylesheet" href="iot.css">
+  <section class="hero" id="hero" style="color: white; text-align: center; padding: 120px 20px;">
+            <!-- Video background -->
+                <video autoplay muted loop playsinline class="bg-video">
+                <source src="/image/iot.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+            </video>
         <div class="container">
             <div class="hero-content">
                 <h1>Internet of Things (IoT) Services</h1>
@@ -51,50 +54,39 @@
         </div>
     </section>
 
-<!-- IoT Features Section -->
-    <section class="features" id="iot-features">
+       <!-- IoT Business Benefits Section -->
+    <section class="iot-benefits">
         <div class="container">
-            <h2>Our IoT Capabilities</h2>
-            <div class="feature-grid">
+            <h2>Why Choose Our IoT Solutions?</h2>
+            <div class="benefits-grid">
 
-                <!-- Use Cases -->
-                <div class="feature-item">
-                    <h3>Use Cases</h3>
-                    <ul>
-                        <li>Predictive maintenance</li>
-                        <li>Asset tracking</li>
-                        <li>Fleet management</li>
-                        <li>Smart metering</li>
-                        <li>Digital twins</li>
-                        <li>Smart cities</li>
-                    </ul>
+                <!-- Efficiency & Automation -->
+                <div class="benefit-card">
+                    <i class="fas fa-gears benefit-icon"></i>
+                    <h3>Improved Efficiency & Automation</h3>
+                    <p>Increase business efficiency by automating processes and streamlining operations, 
+                       allowing you to better manage your operational costs.</p>
                 </div>
 
-                <!-- Connected Devices -->
-                <div class="feature-item">
-                    <h3>Connected Devices Sending Telemetry</h3>
-                    <ul>
-                        <li>Temperature</li>
-                        <li>Humidity</li>
-                        <li>Pressure</li>
-                        <li>Proximity</li>
-                    </ul>
+                <!-- Data-Driven Decisions -->
+                <div class="benefit-card">
+                    <i class="fas fa-database benefit-icon"></i>
+                    <h3>Data-Driven Decisions</h3>
+                    <p>Make fast, data-driven decisions with access to real-time insights powered by 
+                       low-latency connectivity and intelligent IoT analytics.</p>
                 </div>
 
-                <!-- Benefits -->
-                <div class="feature-item">
-                    <h3>Benefits</h3>
-                    <ul>
-                        <li>Cost reduction</li>
-                        <li>Speed in execution</li>
-                        <li>New opportunities</li>
-                    </ul>
+                <!-- Customer Experience -->
+                <div class="benefit-card">
+                    <i class="fas fa-users benefit-icon"></i>
+                    <h3>Customer Experience Enhancement</h3>
+                    <p>Deliver personalized and seamless customer experiences. With AI-driven IoT insights, 
+                       improve engagement and elevate customer satisfaction.</p>
                 </div>
 
             </div>
         </div>
     </section>
-
 
     <!-- Footer -->
     <footer>
@@ -142,5 +134,21 @@
 
     <!-- External JS -->
     <script src="/Services/js/main.js"></script>
+        <!-- Animation Script -->
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                    observer.unobserve(entry.target); // animate once
+                }
+            });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('.benefit-card').forEach((card, i) => {
+            card.style.transitionDelay = `${i * 0.2}s`; // stagger effect
+            observer.observe(card);
+        });
+    </script>
 </body>
 </html>

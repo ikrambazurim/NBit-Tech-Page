@@ -89,3 +89,39 @@ document.getElementById('contactForm')?.addEventListener('submit', function(e) {
             btn.textContent = 'Send Message';
         });
 });
+// products-scroll.js
+document.addEventListener("DOMContentLoaded", () => {
+  const grid = document.querySelector(".products-grid");
+  const leftBtn = document.querySelector(".carousel-btn.left");
+  const rightBtn = document.querySelector(".carousel-btn.right");
+  const scrollAmount = 300; // card width + gap
+
+  // Function to scroll
+  window.scrollCarousel = (direction) => {
+    grid.scrollBy({ left: direction * scrollAmount, behavior: "smooth" });
+    setTimeout(updateButtons, 300); // check after scroll animation
+  };
+
+  // Update button states
+  function updateButtons() {
+    const maxScrollLeft = grid.scrollWidth - grid.clientWidth;
+
+    if (grid.scrollLeft <= 0) {
+      leftBtn.classList.add("hidden");
+    } else {
+      leftBtn.classList.remove("hidden");
+    }
+
+    if (grid.scrollLeft >= maxScrollLeft - 1) {
+      rightBtn.classList.add("hidden");
+    } else {
+      rightBtn.classList.remove("hidden");
+    }
+  }
+
+  // Initial check
+  updateButtons();
+
+  // Update when user scrolls manually
+  grid.addEventListener("scroll", updateButtons);
+});

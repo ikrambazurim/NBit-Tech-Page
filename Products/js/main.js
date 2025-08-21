@@ -156,3 +156,39 @@ window.addEventListener('load', () => {
         img.style.transitionDelay = `${index * 0.1}s`;
     });
 });
+
+// === Existing Menu Toggle ===
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const cylinderSection = document.querySelector(".cylinder-section");
+  if (!cylinderSection) return;
+
+  const buttons = cylinderSection.querySelectorAll(".cylinder-btn");
+  const contents = cylinderSection.querySelectorAll(".popup-content");
+  const placeholder = cylinderSection.querySelector(".popup-placeholder");
+
+  buttons.forEach((btn, index) => {
+    btn.addEventListener("mouseenter", () => {
+      // Reset
+      contents.forEach(c => c.classList.remove("active"));
+
+      // Show hovered content
+      contents[index].classList.add("active");
+
+      if (placeholder) placeholder.style.display = "none";
+    });
+  });
+
+  // Reset when leaving the whole section
+  cylinderSection.addEventListener("mouseleave", () => {
+    contents.forEach(c => c.classList.remove("active"));
+    if (placeholder) placeholder.style.display = "block";
+  });
+});
+

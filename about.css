@@ -69,10 +69,11 @@
 }
 
 .expertise-item {
-  width: 200px;        /* fixed card width */
+  width: 150px;        /* fixed card width */
   height: 200px;       /* fixed card height */
   perspective: 1000px;
 }
+
 
 .flip-card {
   width: 100%;
@@ -161,3 +162,14 @@
     order: -1;
   }
 }
+
+.flip-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* shrink to fit */
+  gap: 20px;
+  justify-items: center;
+  margin: 40px auto;
+  max-width: 100%; /* allow full width */
+}
+
+
