@@ -102,34 +102,6 @@
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
-.popup-content {
-  position: absolute;             /* stays relative to section */
-  top: 10px;                      /* adjust down from section top */
-  left: 50%;
-  transform: translateX(-50%);    /* only center horizontally */
-  width: 80%;
-  max-width: 1200px;
-  background: #fff;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
-  z-index: 100;
-
-  /* Animation states */
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.popup-content.active {
-  visibility: visible;
-  opacity: 1;
-  transform: translateX(-50%) scale(1); /* no vertical centering */
-}
-
-
-.popup-placeholder {
-  margin-top: 250px; /* push image lower so popups don’t overlap */
 }
 
 .cylinder-section {
