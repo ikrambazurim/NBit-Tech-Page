@@ -31,11 +31,15 @@
         </div>
     </header>
 
-    <section class="hero" id="hero" style="background-image: url(/image/hands-table-business-meeting.jpg);">
+<section class="hero" id="hero">
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="/image/AMS.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <div class="container">
             <div class="hero-content">
-                <h1>NOX ERP <br><span>Digitalize Your Business</span></h1>
-                <p><b>Technology provides powerful ERP solutions that unify business processes, boost efficiency, and drive smarter decisions across your organization.</b></p>
+                <h1>AMS <br><span>Asset Management System</span></h1>
+                <p><b>Technology delivers powerful Asset Management solutions that streamline asset lifecycle processes, boost efficiency, and drive smarter decisions across your organization.</b></p>
                 <div class="btn-group">
                     <a href="/index.html#contact" class="btn">Get Started</a>
                 </div>
@@ -51,22 +55,34 @@
     <button class="cylinder-btn" data-popup="popup4">Maintenance Oversight</button>
   </div>
 
-  <div class="popup-container">
-    <div class="popup-content" id="popup1">
-      <h2>Company Overview</h2>
-      <p>We specialize in digital transformation solutions that empower businesses to adapt and grow.</p>
+<div class="popup-container">
+   <div class="popup-content active" id="popup1" style="display: flex; align-items: center; gap: 30px;">
+    <div class="popup-image" style="flex: 1;">
+      <img src="/image/AMS.png" alt="Asset Management"
+           style="width:100%; max-width:350px; height:auto; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.2);">
     </div>
+    <div class="popup-text" style="flex: 2;">
+      <p>
+        An all-in-one centralized system to manage all your asset. We offer you end-to-end control of your asset management process while also provides a larger function in terms of operational and financial efficiency in addition to assisting companies in keeping track of their precious assets, including : 
+        <br><br>
+        - Facilitate Efficient Business Operations <br>
+        - Reduce Wasted Resources <br>
+        - Maintain Financial and Regulatory Compliance
+      </p>
+    </div>
+  </div>
     <div class="popup-content" id="popup2">
-      <h2>Key Features</h2>
-      <p>Cloud migration, ERP, IoT, and customized software solutions tailored to your business needs.</p>
+      <p>Take full control of your organization’s assets with a centralized system that tracks every item throughout its lifecycle. From procurement to disposal, 
+        ensure nothing goes unnoticed as well as reducing losses, optimizing utilization, and extending asset longevity.</p>
     </div>
     <div class="popup-content" id="popup3">
-      <h2>Industry Solutions</h2>
-      <p>We provide industry-specific ERP and CRM integrations that streamline processes.</p>
+      <p>Stay ahead of breakdowns with proactive maintenance scheduling and real-time monitoring. Our system helps you plan preventive and 
+        corrective maintenance, track service history, 
+        and minimize costly downtime, ensuring 
+        your assets perform at their best.</p>
     </div>
     <div class="popup-content" id="popup4">
-      <h2>Our Clients</h2>
-      <p>Trusted by leading businesses across industries worldwide.</p>
+      <p>Turn asset data into actionable insights with powerful analytics and customizable reports. Identify usage trends, forecast maintenance needs, and gain complete visibility over costs, enabling smarter, data-driven decision-making for your business.</p>
     </div>
   </div>
 </section>
@@ -231,5 +247,53 @@
 </script>
  
     <script src="js/main.js"></script>
+
+   <script>
+  const defaultPopup = document.getElementById("popup1"); // Overview
+
+  function showDefault() {
+    document.querySelectorAll(".popup-content").forEach(p => p.classList.remove("active"));
+    defaultPopup.classList.add("active");
+  }
+
+  // Show Overview by default
+  showDefault();
+
+  document.querySelectorAll(".cylinder-btn").forEach(button => {
+    const targetPopup = document.getElementById(button.dataset.popup);
+
+    button.addEventListener("mouseenter", () => {
+      document.querySelectorAll(".popup-content").forEach(p => p.classList.remove("active"));
+      targetPopup.classList.add("active");
+    });
+
+    button.addEventListener("mouseleave", () => {
+      setTimeout(() => {
+        if (![...document.querySelectorAll(".cylinder-btn:hover, .popup-content:hover")].some(Boolean)) {
+          showDefault();
+        }
+      }, 150);
+    });
+  });
+
+  document.querySelectorAll(".popup-content").forEach(popup => {
+    popup.addEventListener("mouseleave", () => {
+      setTimeout(() => {
+        if (![...document.querySelectorAll(".cylinder-btn:hover, .popup-content:hover")].some(Boolean)) {
+          showDefault();
+        }
+      }, 150);
+    });
+  });
+
+  // 👇 Ensure Overview always comes back after scrolling
+  window.addEventListener("scroll", () => {
+    if (![...document.querySelectorAll(".cylinder-btn:hover, .popup-content:hover")].some(Boolean)) {
+      showDefault();
+    }
+  });
+</script>
+
+
 </body>
 </html>
