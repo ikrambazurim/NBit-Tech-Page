@@ -101,7 +101,7 @@ window.addEventListener('load', () => {
         observer.observe(reveal);
     });
 
-    /*ERP Tab Functionality - Corrected Placement*/
+    /*ERP Tab Function*/
     const erpTabButtons = document.querySelectorAll('.erp-tab-btn');
     const erpFeaturePanels = document.querySelectorAll('.erp-feature-panel');
     
@@ -115,7 +115,7 @@ window.addEventListener('load', () => {
                 // Add active class to clicked button
                 this.classList.add('erp-active');
                 
-                // Show corresponding panel
+                // Show current panel
                 const erpTabId = this.getAttribute('data-erp-tab');
                 const erpActivePanel = document.getElementById(erpTabId);
                 if (erpActivePanel) {
@@ -150,14 +150,14 @@ window.addEventListener('load', () => {
     const reveal = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
     animateOnScroll(reveal, 'active');
 
-    // Optional: Add hover effect to images with delay
+    //hover effect to images with delay
     const hisImages = document.querySelectorAll('.his-image img');
     hisImages.forEach((img, index) => {
         img.style.transitionDelay = `${index * 0.1}s`;
     });
 });
 
-// === Existing Menu Toggle ===
+//Menu Toggle
 const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
 
