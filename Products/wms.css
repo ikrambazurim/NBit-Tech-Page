@@ -33,7 +33,7 @@
   top: 0;
   bottom: 0;
   width: 50px;
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--gray);
   border: none;
   cursor: pointer;
   display: flex;
@@ -42,7 +42,7 @@
   z-index: 5;
   font-size: 28px;
   color: #333;
-  transition: opacity 0.3s ease, background 0.3s ease;
+  transition: opacity 0.6s ease, background 0.6s ease;
 }
 
 .carousel-btn:hover {
@@ -50,11 +50,11 @@
 }
 
 .carousel-btn.left {
-  left: 0;
+  left: -60px;
 }
 
 .carousel-btn.right {
-  right: 0;
+  right: -60px;
 }
 
 /* Hide arrows when disabled */
