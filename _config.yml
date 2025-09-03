@@ -37,6 +37,9 @@ sass:
   sass_dir: assets/css
   style: compressed
 
+include:
+  - assets/image
+
 # Build settings
 #theme: minima
 plugins:
