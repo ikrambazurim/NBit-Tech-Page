@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
+title: "NBit Technology Sdn. Bhd."
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -29,8 +29,16 @@ url: "https://www.nbit.technology/" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 
+exclude:
+  - main.scss
+  - main.css
+
+sass:
+  sass_dir: assets/css
+  style: compressed
+
 # Build settings
-theme: minima
+#theme: minima
 plugins:
   - jekyll-feed
 

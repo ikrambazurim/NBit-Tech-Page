@@ -1,38 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NBit Technology - Digital Transformation Services</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-    <!-- Header -->
-    <header id="header">
-        <div class="container">
-            <nav>
-                <a href="#" class="logo"><img src = "/assets/image/Nbit logo.jpeg"></a>
-                <div class="menu-toggle" id="menuToggle">
-                    <i class="fas fa-bars">☰</i>
-                </div>
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#partners">Partners</a></li>
-                    <!-- <li><a href="#careers">Careers</a></li>-->
-                    <li><a href="#client">Client</a></li>
-                    <li><a href="/about/about.html">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
+---
+layout: default
+title: Home
+---
     <!-- Hero Section -->
-    <section class="hero" id="home" style="background-image: url(assets/image/bgHomepage.jpg);">
-        <div class="container";>
-            <div class="hero-content" >
+    <section class="hero" id="home" style="background-image: url('{{ '/assets/image/bgHomepage.jpg' | relative_url }}');">
+        <div class="container">
+            <div class="hero-content">
                 <h1>Digital Transformation <span>Made Accessible</span></h1>
                 <p><b>NBit Technology provides cutting-edge technology services to businesses of all sizes, helping them embrace Industry 4.0 and thrive in the digital age.</b></p>
                 <div class="btn-group">
@@ -40,7 +13,6 @@
                 </div>
             </div>
         </div>
-     
     </section>
 
     <!-- Services Section -->
@@ -56,44 +28,42 @@
                     <h3>Cloud Migration</h3>
                     <p>Migrate to the cloud smoothly, with little downtime and high efficiency.</p>
                     <br>
-                    <a href="Services/cloudservices.html" class="btn">Learn More</a>
+                    <a href="{{ '/Services/cloudservices.html' | relative_url }}" class="btn">Learn More</a>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">📊</div>
                     <h3>Big Data Analytics</h3>
                     <p>Unlock insights from your data with our advanced analytics solutions.</p>
                     <br>
-                    <a href="Services/bigdata.html" class="btn">Learn More</a>
+                    <a href="{{ '/Services/bigdata.html' | relative_url }}" class="btn">Learn More</a>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🌐</div>
                     <h3>IoT Solutions</h3>
                     <p>Connect your devices and systems with our Internet of Things expertise.</p>
                     <br>
-                    <a href="Services/IOTservices.html" class="btn">Learn More</a>
-
-
+                    <a href="{{ '/Services/IOTservices.html' | relative_url }}" class="btn">Learn More</a>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">💻</div>
                     <h3>Application Development</h3>
                     <p>Custom software solutions tailored to your business needs.</p>
                     <br>
-                    <a href="Services/AppDev.html" class="btn">Learn More</a>
+                    <a href="{{ '/Services/AppDev.html' | relative_url }}" class="btn">Learn More</a>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🤖</div>
                     <h3> Artificial Intelligence</h3>
                     <p>Implement AI and machine learning to automate and optimize your processes.</p>
                     <br>
-                    <a href="Services/AI.html" class="btn">Learn More</a>
+                    <a href="{{ '/Services/AI.html' | relative_url }}" class="btn">Learn More</a>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🛡️</div>
                     <h3>Managed Services</h3>
                     <p>Comprehensive IT management so you can focus on your core business.</p>
                     <br>
-                    <a href="Services/Managedservices.html" class="btn">Learn More</a>
+                    <a href="{{ '/Services/Managedservices.html' | relative_url }}" class="btn">Learn More</a>
                 </div>
             </div>
         </div>
@@ -116,67 +86,67 @@
       <div class="products-grid">
         <!-- Card 1 -->
         <div class="product-card">
-          <div class="product-image" style="background-image: url('assets/image/HRIS image.jpg');"></div>
+          <div class="product-image" style="background-image: url('{{ '/assets/image/HRIS image.jpg' | relative_url }}');"></div>
           <div class="product-content">
             <h2>HRMS</h2>
             <h3>Human Resource Management System</h3>
             <p>A comprehensive solution for managing your workforce, from recruitment to retirement, with advanced analytics and automation features.</p>
-            <a href="/Products/hrms.html" class="btn">Learn More</a>
+            <a href="{{ '/Products/hrms.html' | relative_url }}" class="btn">Learn More</a>
           </div>
         </div>
 
         <!-- Card 2 -->
         <div class="product-card">
-          <div class="product-image" style="background-image: url('assets/image/FAS image.jpg');"></div>
+          <div class="product-image" style="background-image: url('{{ '/assets/image/FAS image.jpg' | relative_url }}');"></div>
           <div class="product-content">
             <h2>FAS</h2>
             <h3>Financial & Accounting System</h3>
             <p>End-to-end financial management with real-time reporting, compliance tracking, and intelligent forecasting capabilities.</p>
-            <a href="/Products/fas.html" class="btn">Learn More</a>
+            <a href="{{ '/Products/fas.html' | relative_url }}" class="btn">Learn More</a>
           </div>
         </div>
 
         <!-- Card 3 -->
         <div class="product-card">
-          <div class="product-image" style="background-image: url('assets/image/erp.png'); background-size: cover;"></div>
+          <div class="product-image" style="background-image: url('{{ '/assets/image/erp.png' | relative_url }}'); background-size: cover;"></div>
           <div class="product-content">
             <h2>NOX ERP</h2>
             <h3>NOX Enterprise Resource Planner</h3>
             <p>An all-in-one ERP platform that streamlines every aspect of your business from finance and inventory to HR and operations with real-time insights, automation, and seamless integration.</p>
-            <a href="/Products/erp.html" class="btn">Learn More</a>
+            <a href="{{ '/Products/erp.html' | relative_url }}" class="btn">Learn More</a>
           </div>
         </div>
 
         <!-- Card 4 -->
         <div class="product-card">
-          <div class="product-image" style="background-image: url('assets/image/Patient.png'); background-size: cover;"></div>
+          <div class="product-image" style="background-image: url('{{ '/assets/image/Patient.png' | relative_url }}'); background-size: cover;"></div>
           <div class="product-content">
             <h2>NOX HIS</h2>
             <h3>NOX Hospital Inventory System</h3>
             <p>A unified Hospital Inventory System that manages asset and inventory with real-time access and seamless integration across multiple departments.</p>
-            <a href="/Products/his.html" class="btn">Learn More</a>
+            <a href="{{ '/Products/his.html' | relative_url }}" class="btn">Learn More</a>
           </div>
         </div>
 
         <!-- Card 5 -->
         <div class="product-card">
-          <div class="product-image" style="background-image: url('assets/image/AMS.png'); background-size: cover;"></div>
+          <div class="product-image" style="background-image: url('{{ '/assets/image/AMS.png' | relative_url }}'); background-size: cover;"></div>
           <div class="product-content">
             <h2>AMS</h2>
             <h3>Asset Management System</h3>
             <p>Centralized Asset Management System with tracking, audit trails, and full lifecycle control for better asset optimization.</p>
-            <a href="/Products/ams.html" class="btn">Learn More</a>
+            <a href="{{ '/Products/ams.html' | relative_url }}" class="btn">Learn More</a>
           </div>
         </div>
 
         <!-- Card 6 -->
         <div class="product-card">
-          <div class="product-image" style="background-image: url('assets/image/wms.png'); background-size: cover;"></div>
+          <div class="product-image" style="background-image: url('{{ '/assets/image/wms.png' | relative_url }}'); background-size: cover;"></div>
           <div class="product-content">
             <h2>WMS</h2>
             <h3>Warehouse Management System</h3>
             <p>Efficient warehouse management system with real-time tracking, barcode scanning, and automated reporting.</p>
-            <a href="/Products/wms.html" class="btn">Learn More</a>
+            <a href="{{ '/Products/wms.html' | relative_url }}" class="btn">Learn More</a>
           </div>
         </div>
       </div>
@@ -187,24 +157,6 @@
   </div>
 </section>
 
-
-    <!-- Partners Section 
-    <section class="partners" id="partners">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Partners</h2>
-                <p>We collaborate with industry leaders to deliver the best solutions to our clients.</p>
-            </div>
-            <div class="partner-logos">
-                <img src="/image/Amazon-Web-Services-AWS-Logo.png" alt="Partner 1" class="partner-logo">
-                <img src="/image/Microsoft.png" alt="Partner 2" class="partner-logo">
-                <img src="/image/Axtraction.jpg" alt="Partner 3" class="partner-logo">
-                <img src="https://via.placeholder.com/150x60/1d3557/ffffff?text=Partner+4" alt="Partner 4" class="partner-logo">
-                <img src="https://via.placeholder.com/150x60/1d3557/ffffff?text=Partner+5" alt="Partner 5" class="partner-logo">
-            </div>
-        </div>
-    </section>-->
-
     <!-- Partners Section -->
 <section class="partners" id="partners">
     <div class="container">
@@ -214,81 +166,17 @@
         </div>
         <div class="partner-logos">
             <a href="https://aws.amazon.com" target="_blank">
-                <img src="assets/image/Amazon-Web-Services-AWS-Logo.png" alt="AWS" class="partner-logo">
+                <img src="{{ '/assets/image/Amazon-Web-Services-AWS-Logo.png' | relative_url }}" alt="AWS" class="partner-logo">
             </a>
             <a href="https://www.microsoft.com" target="_blank">
-                <img src="assets/image/Microsoft.png" alt="Microsoft" class="partner-logo">
+                <img src="{{ '/assets/image/Microsoft.png' | relative_url }}" alt="Microsoft" class="partner-logo">
             </a>
             <a href="https://axtraction.ai/" target="_blank">
-                <img src="assets/image/Axtraction2.png" alt="Axtraction" class="partner-logo">
+                <img src="{{ '/assets/image/Axtraction2.png' | relative_url }}" alt="Axtraction" class="partner-logo">
             </a>
-
         </div>
     </div>
 </section>
-
-    <!-- Careers Section -->
-    <!--<section class="careers" id="careers">
-        <div class="container">
-            <div class="section-title">
-                <h2>Careers</h2>
-                <p>Join our team of innovators and help shape the future of technology.</p>
-            </div>
-            <div class="career-card">
-                <h3>Cloud Solutions Architect</h3>
-                <div class="career-meta">
-                    <span>📍 Kuala Lumpur</span>
-                    <span>🕒 Full-time</span>
-                </div>
-                <p>Design and implement cloud-based solutions for our diverse client base, ensuring scalability, security, and performance.</p>
-                <a href="#contact" class="btn">Apply Now</a>
-            </div>
-            <div class="career-card">
-                <h3>Data Scientist</h3>
-                <div class="career-meta">
-                    <span>📍 Remote</span>
-                    <span>🕒 Full-time</span>
-                </div>
-                <p>Develop machine learning models and analytics solutions to solve complex business problems across industries.</p>
-                <a href="#contact" class="btn">Apply Now</a>
-            </div>
-            <div class="career-card">
-                <h3>IoT Engineer</h3>
-                <div class="career-meta">
-                    <span>📍 Penang</span>
-                    <span>🕒 Contract</span>
-                </div>
-                <p>Design and implement IoT solutions for industrial and commercial applications, from sensors to cloud integration.</p>
-                <a href="#contact" class="btn">Apply Now</a>
-            </div>
-        </div>
-    </section>-->
-
-    <!-- About Section 
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>About NBit Technology</h2>
-                    <p>NBit Technology is built to cater to the demand for state-of-the-art technology services especially ones that are accessible for all sizes & segments of businesses. Embracing digital transformation is a must. We have the know how and glad to extend our services for everyone.</p>
-                    
-                    <div class="about-mission">
-                        <div class="mission-card">
-                            <h3>Our Vision</h3>
-                            <p>To help make cloud & intelligent services accessible for all businesses.</p>
-                        </div>
-                        <div class="mission-card">
-                            <h3>Our Mission</h3>
-                            <p>To be a global services company specializing in IR4.0 technologies.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <img src="/image/macro-eye-iris-details.jpg" alt="NBit Technology Team">
-                </div>
-            </div>
-        </div>
-    </section>-->
 
     <!-- Client Section -->
     <section class="client" id="client">
@@ -297,51 +185,51 @@
             <h2>Our Client</h2>
             <p>We collaborate with industry leaders to deliver the best solutions to our clients.</p>
         </div>
-        <div class=" client-logos">
+        <div class="client-logos">
             <a>
-                <img src="assets/image/fujiDndt.jpg" alt="AWS" class="client-logo">
+                <img src="{{ '/assets/image/fujiDndt.jpg' | relative_url }}" alt="Fuji" class="client-logo">
             </a>
             <a>
-                <img src="assets/image/esm.jpg" alt="AWS" class="client-logo">
+                <img src="{{ '/assets/image/esm.jpg' | relative_url }}" alt="ESM" class="client-logo">
             </a>            
             <a>
-                <img src="assets/image/omegaUlung.jpg" alt="AWS" class="client-logo">
+                <img src="{{ '/assets/image/omegaUlung.jpg' | relative_url }}" alt="Omega Ulung" class="client-logo">
             </a>
             <a>
-                <img src="assets/image/Zenig.jpg" alt="AWS" class="client-logo">
+                <img src="{{ '/assets/image/Zenig.jpg' | relative_url }}" alt="Zenig" class="client-logo">
             </a>
             <a>
-                <img src="assets/image/pfam.jpg" alt="AWS" class="client-logo">
+                <img src="{{ '/assets/image/pfam.jpg' | relative_url }}" alt="PFAM" class="client-logo">
             </a>
             <a>
-                <img src="assets/image/maker's receipe.png" alt="AWS" class="client-logo">
+                <img src="{{ '/assets/image/makers_receipe.png' | relative_url }}" alt="Maker's Recipe" class="client-logo">
             </a>
             <a>
-                <img src="assets/image/yayasanUhud.jpeg" alt="AWS" class="client-logo">
+                <img src="{{ '/assets/image/yayasanUhud.jpeg' | relative_url }}" alt="Yayasan Uhud" class="client-logo">
             </a>
             <a>
-                <img src="assets/image/Mjii.png" alt="AWS" class="client-logo">
+                <img src="{{ '/assets/image/Mjii.png' | relative_url }}" alt="MJII" class="client-logo">
             </a>
             <a>
-                <img src="assets/image/ikm.png" alt="AWS" class="client-logo">
+                <img src="{{ '/assets/image/ikm.png' | relative_url }}" alt="IKM" class="client-logo">
             </a>
             <a>
-                <img src="assets/image/usim.png" alt="AWS" class="client-logo">
+                <img src="{{ '/assets/image/usim.png' | relative_url }}" alt="USIM" class="client-logo">
             </a>
             <a>
-                <img src="assets/image/UTP-logo.png" alt="AWS" class="client-logo">
+                <img src="{{ '/assets/image/UTP-logo.png' | relative_url }}" alt="UTP" class="client-logo">
             </a>
             <a>
-                <img src="assets/image/MBK logo.png" alt="AWS" class="client-logo">
+                <img src="{{ '/assets/image/MBK_logo.png' | relative_url }}" alt="MBK" class="client-logo">
             </a>
             <a>
-                <img src="assets/image/insken_logo.png" alt="AWS" class="client-logo">
+                <img src="{{ '/assets/image/insken_logo.png' | relative_url }}" alt="Insken" class="client-logo">
             </a>
             <a>
-                <img src="assets/image/mbi.jpg" alt="AWS" class="client-logo">
+                <img src="{{ '/assets/image/mbi.jpg' | relative_url }}" alt="MBI" class="client-logo">
             </a>
             <a>
-            <img src="assets/image/primeluxEnergy.jpg" alt="AWS" class="client-logo">
+            <img src="{{ '/assets/image/primeluxEnergy.jpg' | relative_url }}" alt="Primelux Energy" class="client-logo">
             </a>
         </div>
     </div>
@@ -387,19 +275,19 @@
                     <form id="contactForm">
                         <div class="form-group">
                             <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" class="form-control" required> <!-- Added name="name" -->
+                            <input type="text" id="name" name="name" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Your Email</label>
-                            <input type="email" id="email" name="email" class="form-control" required> <!-- Added name="email" -->
+                            <input type="email" id="email" name="email" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" class="form-control" required> <!-- Added name="subject" -->
+                            <input type="text" id="subject" name="subject" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="message">Your Message</label>
-                            <textarea id="message" name="message" class="form-control" required></textarea> <!-- Added name="message" -->
+                            <textarea id="message" name="message" class="form-control" required></textarea>
                         </div>
                         <button type="submit" class="btn">Send Message</button>
                     </form>
@@ -407,61 +295,3 @@
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>NBit Technology</h3>
-                    <p>Making digital transformation accessible for businesses of all sizes through innovative technology solutions.</p>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#products">Products</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="#services">Cloud Migration</a></li>
-                        <li><a href="#services">Big Data Analytics</a></li>
-                        <li><a href="#services">IoT Solutions</a></li>
-                        <li><a href="#services">Application Development</a></li>
-                        <li><a href="#services">Managed Services</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Connect With Us</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">LinkedIn</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Instagram</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 NBit Technology. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <div class="back-to-top" id="backToTop">↑</div>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-        <script>
-        // Initialize EmailJS with your Public Key
-        (function() {
-            emailjs.init("oWfKA67MaOFS2bqyK"); // Replace with your actual public key
-        })();
-    </script>
-    <!-- JavaScript -->
-    <script src="assets/js/main.js"></script>
-</body>
-</html>
