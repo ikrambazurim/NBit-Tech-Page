@@ -73,6 +73,8 @@ window.addEventListener('load', () => {
     /** Hero Section Animation */
     const heroSection = document.getElementById('hero');
     if (heroSection) {
+        heroSection.classList.remove('animate-bg');
+        void heroSection.offsetWidth; // Trigger reflow
         setTimeout(() => {
             heroSection.classList.add('animate-bg');
         }, 300);

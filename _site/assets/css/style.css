@@ -1172,7 +1172,7 @@
             }
         }
 
-/* ===== AI Card Grid ===== */
+/* ai card */
         .ai-page .products-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -1214,7 +1214,7 @@
             color: #555;
         }
 
-/* Responsive layout */
+/* responsive layout */
         @media (max-width: 900px) {
             .products-grid {
                 grid-template-columns: repeat(2, 1fr);

@@ -5,11 +5,7 @@ css : ams.css
 js : product.js
 ---
 <!-- Hero Section --> 
-<section class="hero" id="hero">
-        <video autoplay muted loop playsinline class="bg-video">
-            <source src="{{'/assets/image/AMS.mp4' | relative_url}}" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+    <section class="hero" id="hero" style="background-image: url({{'/assets/image/2807755_18130.jpg'| relative_url }});">
         <div class="container">
             <div class="hero-content">
                 <h1>Asset Management System, <span>manage your asset like a pro</span></h1>
@@ -49,7 +45,7 @@ js : product.js
         <li>Maintain Financial and Regulatory Compliance</li>
       </ul>
       <div class="tab-image">
-        <img src="/assets/image/business-people-working-with-ipad-high-angle.jpg" alt="Company Overview Dashboard">
+        <img src="{{'/assets/image/business-people-working-with-ipad-high-angle.jpg' | relative_url}} " alt="Company Overview Dashboard">
       </div>
     </div>
 
@@ -63,7 +59,7 @@ js : product.js
         <li>Ensure better asset utilization & cost efficiency</li>
       </ul>
       <div class="tab-image">
-        <img src="/assets/image/still-life-supply-chain-representation.jpg" alt="Asset Management Dashboard">
+        <img src="{{'/assets/image/still-life-supply-chain-representation.jpg' | relative_url }}" alt="Asset Management Dashboard">
       </div>
     </div>
 
@@ -77,7 +73,7 @@ js : product.js
         <li>Predictive insights for smarter decisions</li>
       </ul>
       <div class="tab-image">
-        <img src="/assets/image/data-analytics-tablet.jpg" alt="Analytics Dashboard">
+        <img src="{{'/assets/image/data-analytics-tablet.jpg' | relative_url }}" alt="Analytics Dashboard">
       </div>
     </div>
 
@@ -91,7 +87,7 @@ js : product.js
         <li>Minimized downtime with proactive alerts</li>
       </ul>
       <div class="tab-image">
-        <img src="/assets/image/two-colleagues-factory.jpg" alt="Maintenance Dashboard">
+        <img src="{{'/assets/image/two-colleagues-factory.jpg' | relative_url }}" alt="Maintenance Dashboard">
       </div>
     </div>
   </div>
@@ -105,7 +101,7 @@ js : product.js
         <div class="container feature-content">
             <!-- Image -->
             <div class="feature-image">
-                <img src="/assets/image/ChatGPT Image Aug 21, 2025, 08_16_06 PM.png" alt="coding"/>
+                <img src="{{'/assets/image/ChatGPT Image Aug 21, 2025, 08_16_06 PM.png' | relative_url }}" alt="coding"/>
             </div>
 
             <!-- Text Content -->
@@ -214,8 +210,6 @@ js : product.js
     }
   });
 </script>
- 
-    <script src="js/main.js"></script>
 
    <script>
   const defaultPopup = document.getElementById("popup1"); // Overview

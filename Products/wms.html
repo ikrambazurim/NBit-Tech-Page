@@ -6,11 +6,7 @@ js: product.js
 ---
 
 <!-- Hero Section -->
-<section class="hero" id="hero">
-        <video autoplay muted loop playsinline class="bg-video">
-            <source src="/assets/image/warehousebg.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+    <section class="hero" id="hero" style="background-image: url({{'/assets/image/warehousebg.jpg'| relative_url }} )";>
         <div class="container">
             <div class="hero-content">
                 <h1>Warehouse Management System, <span>boosting your operations with tech</span></h1>
@@ -39,7 +35,7 @@ js: product.js
       <div class="products-grid">
         <!-- Card 1 -->
         <div class="product-card">
-          <div class="product-image" style="background-image: url('/assets/image/warehouse4.jpg');"></div>
+          <div class="product-image" style="background-image: url({{'/assets/image/warehouse4.jpg'| relative_url}});"></div>
           <div class="product-content">
             <h3>Gain Absolute Inventory Control and Accuracy</h3>
             <p style="text-align: justify;"> Track the location, status, and movement of every asset in real time to prevent stock-outs, overstocking, and losses.</p>
@@ -48,7 +44,7 @@ js: product.js
 
         <!-- Card 2 -->
         <div class="product-card">
-          <div class="product-image" style="background-image: url('/assets/image/warehouse2.jpg');"></div>
+          <div class="product-image" style="background-image: url({{'/assets/image/warehouse2.jpg'| relative_url }});"></div>
           <div class="product-content">
             <h3>Unleash Operational Efficiency with Automation</h3>
             <p style="text-align: justify;">Streamline workflows from receipt to dispatch by automating tasks like data entry, 
@@ -59,7 +55,7 @@ js: product.js
 
         <!-- Card 3 -->
         <div class="product-card">
-          <div class="product-image" style="background-image: url('/assets/image/warehouse3.jpg'); background-size: cover;"></div>
+          <div class="product-image" style="background-image: url({{'/assets/image/warehouse3.jpg'| relative_url }}); background-size: cover;"></div>
           <div class="product-content">
             <h3>Make Smarter, Data-Driven Decisions</h3>
             <p style="text-align: justify;">Gain actionable insights into inventory trends, warehouse performance, 
@@ -70,7 +66,7 @@ js: product.js
 
         <!-- Card 4 -->
         <div class="product-card">
-          <div class="product-image" style="background-image: url('/assets/image/warehouse1.jpg'); background-size: cover;"></div>
+          <div class="product-image" style="background-image: url({{'/assets/image/warehouse1.jpg'| relative_url }}); background-size: cover;"></div>
           <div class="product-content">
             <h3>Engineered for Demanding Industrial Environments</h3>
             <p style="text-align: justify;">Designed for industries like Oil & Gas with advanced tracking, 
@@ -81,7 +77,7 @@ js: product.js
 
         <!-- Card 5 -->
         <div class="product-card">
-          <div class="product-image" style="background-image: url('/assets/image/warehouse5.jpg'); background-size: cover;"></div>
+          <div class="product-image" style="background-image: url({{'/assets/image/warehouse5.jpg'| relative_url }}); background-size: cover;"></div>
           <div class="product-content">
             <h3>Scalable Foundation <br> for Growth</h3>
             <p style="text-align: justify;">Centralized Asset Management System with tracking, audit trails, and full 
@@ -102,7 +98,7 @@ js: product.js
             <!-- Image -->
              
             <div class="feature-image">
-                <img src="/assets/image/ChatGPT Image Aug 21, 2025, 08_39_13 PM.png" alt="coding"/>
+                <img src="{{'/assets/image/ChatGPT Image Aug 21, 2025, 08_39_13 PM.png'| relative_url }}" alt="coding"/>
             </div>
 
             <!-- Text Content -->

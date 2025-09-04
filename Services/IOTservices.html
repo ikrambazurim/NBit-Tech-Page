@@ -6,13 +6,7 @@ js: service.js
 is_iot: true
 ---
     <!-- Hero Section -->
-  <section class="hero" id="hero" style="color: white; text-align: center; padding: 120px 20px;">
-            <!-- Video background -->
-                <video autoplay muted loop playsinline class="bg-video">
-                <source src="{{ '/assets/image/iot.mp4' | relative_url }}" type="video/mp4">
-
-        Your browser does not support the video tag.
-            </video>
+   <section class="hero" id="hero" style="background-image: url({{'/assets/image/futuristic-smart-city-with-5g-global-network-technology.jpg'| relative_url }});">
         <div class="container">
             <div class="hero-content">
                 <h1>Internet of Things (IoT) Services</h1>
@@ -22,7 +16,7 @@ is_iot: true
     </section>
 
        <!-- IoT Business Benefits Section -->
-    <section class="iot-benefits">
+    <section class="iot-benefits" style="margin-bottom: 0;">
         <div class="container">
             <h2>Why Choose Our IoT Solutions?</h2>
             <div class="benefits-grid">
@@ -42,8 +36,6 @@ is_iot: true
                     <p>Make fast, data-driven decisions with access to real-time insights powered by 
                        low-latency connectivity and intelligent IoT analytics.</p>
                 </div>
-
-                <!-- Customer Experience -->
                 <div class="benefit-card">
                     <i class="fa-solid fa-users benefit-icon"></i>
                     <h3>Customer Experience Enhancement</h3>
@@ -54,32 +46,24 @@ is_iot: true
         </div>
     </section>
 
-       <!-- IoT Business Benefits Section -->
-    <section class="iot-benefits">
-        <div class="container">
-            <h2>My Smart City</h2>
+    <!-- Smart City Section -->
+    <section class="iot-benefits" style="margin-top:0 ;">
+            <div class="container">
+                <h2>My Smart City</h2>
             <div class="benefits-grid">
 
-                <!-- Efficiency & Automation -->
-        <div class="benefit-card">
-            <i class="fa-solid fa-city benefit-icon"></i>
-            <h3>Improved Efficiency & Automation</h3>
-            <p>Our Smart City solutions are designed to transform urban spaces into safer and more connected environments. 
-            By integrating advanced technologies with a focus on transparency, efficiency, and sustainability, 
-            we enable governments and communities to enhance everyday living. Through active citizen participation 
-            and smarter resource management, we help modernise cities into liveable, resilient, and future-ready ecosystems.
-            </p>
-        </div>
+            <div class="benefit-card">
+                <i class="fa-solid fa-city benefit-icon"></i>
+                <h3>Improved Efficiency & Automation</h3>
+                <p>Our Smart City solutions are designed to transform urban spaces into safer and more connected environments. 
+                By integrating advanced technologies with a focus on transparency, efficiency, and sustainability, 
+                we enable governments and communities to enhance everyday living. Through active citizen participation 
+                and smarter resource management, we help modernise cities into liveable, resilient, and future-ready ecosystems.
+                </p>
             </div>
-        </div>
     </section>
 
-
-
-
-    <!-- External JS -->
-    <script src="/Services/js/main.js"></script>
-        <!-- Animation Script -->
+    <!-- Animation Script -->
     <script>
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
